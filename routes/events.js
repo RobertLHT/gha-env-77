@@ -5,6 +5,7 @@ import db from '../data/database.js';
 
 const router = Router();
 
+
 router.get('/', async (req, res) => {
   const allEvents = await db.collection('events').find().toArray();
   res.json({ events: allEvents });
